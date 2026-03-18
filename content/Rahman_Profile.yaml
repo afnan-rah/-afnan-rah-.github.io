@@ -1,0 +1,21 @@
+# ============================================================
+# content/Rahman_Profile.yaml
+# ============================================================
+# This is an example student profile. Copy this file to
+# something like content/my_profile.yaml, fill in your own
+# information, and update portfolio_config.yaml to point to it.
+# ============================================================
+
+name: "Afnan Rahman"
+tagline: "Aspiring Data Scientist | MSU Student | Mogul"
+
+about: |
+  Hi, I’m Afnan Rahman, a senior at Michigan State University majoring in Data Science and Criminal Justice with a concentration in Cyber Investigations.
+  I’m interested in cybersecurity, data analytics, and building practical technical solutions that solve real-world problems. 
+  My experience includes working with Python, SQL, automation, and data visualization through coursework, internships, and personal projects. 
+  This portfolio highlights some of the projects that reflect my growth in data, security, and technology.
+
+# Contact information — remove any fields you prefer not to share
+email: "rahman44@msu.edu"
+linkedin: "https://www.linkedin.com/in/rahmanafnan/"
+github: "https://github.com/afnan-rah"
