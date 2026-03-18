@@ -61,7 +61,7 @@ Press `Ctrl+C` in the terminal to stop the server.
 #### Step 1 — Create your student profile
 
 ```bash
-cp content/example_student.yaml content/my_profile.yaml
+cp content/Rahman_Profile.yaml content/my_profile.yaml
 ```
 
 Open `content/my_profile.yaml` and fill in:
@@ -272,7 +272,7 @@ Files you should **not** need to edit unless you want to change the page structu
 ├── build.py                    # Site generator script
 ├── serve.py                    # Local preview server
 ├── content/
-│   ├── example_student.yaml    # Example student profile
+│   ├── Rahman_Profile.yaml    # Example student profile
 │   └── projects/
 │       ├── example_project_1.yaml
 │       └── example_project_2.yaml
