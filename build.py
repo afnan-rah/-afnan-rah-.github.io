@@ -74,7 +74,7 @@ def build() -> None:
 
     theme       = config.get("theme", "light")
     site_title  = config.get("site_title", "My Portfolio")
-    student_rel = config.get("student_file", "content/example_student.yaml")
+    student_rel = config.get("student_file", "content/Rahman_Profile.yaml")
     project_rel = config.get("projects", [])
 
     # ── 2. Load student profile ─────────────────────────────────────────
