@@ -12,12 +12,20 @@
 }
 
 body {
-  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 6px;
 }
 
 a {
@@ -37,6 +45,15 @@ img {
 .site-header {
   padding: 2rem 1.5rem 1rem;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .header-name {
@@ -63,6 +80,16 @@ img {
   letter-spacing: 0.05em;
 }
 
+.site-nav a {
+  padding: 0.35rem 0.6rem;
+  border-radius: 8px;
+}
+
+.site-nav a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
 /* ----- Main content area ----- */
 .site-main {
   flex: 1;
@@ -86,12 +113,105 @@ img {
 }
 
 /* ----- About section ----- */
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
+  gap: 1.5rem;
+  /* Photo shorter than text: keep natural image size (no cover stretch) and vertically center with the copy */
+  align-items: center;
+}
+
+.about-photo {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+  /* Subtle mat when the image is letterboxed (object-fit: contain) */
+  background: rgba(127, 127, 127, 0.08);
+}
+
+.about-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  box-shadow: inset 0 0 0 1px rgba(127, 127, 127, 0.22);
+  pointer-events: none;
+}
+
+.about-photo-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  /* Natural proportions — no cover crop "zoom" */
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
 .about-text {
   font-size: 1.05rem;
 }
 
 .about-text p + p {
   margin-top: 1rem;
+}
+
+/* ----- Skills (About section) ----- */
+.skills-block {
+  margin-top: 0.25rem;
+}
+
+.skills-groups {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.85rem;
+}
+
+.skills-group {
+  padding: 1.15rem 1.15rem;
+  border-radius: 12px;
+  border: 1px solid rgba(127, 127, 127, 0.34);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+}
+
+.skills-group:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14);
+  transform: translateY(-2px);
+}
+
+.skills-category {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.85;
+  margin-bottom: 1.05rem;
+}
+
+.skills-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-content: flex-start;
+  padding-bottom: 0.25rem;
+}
+
+.skill-chip {
+  font-size: 0.82rem;
+  padding: 0.22rem 0.65rem;
+}
+
+@media (min-width: 720px) {
+  .skills-groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+  }
 }
 
 /* ----- Project grid ----- */
@@ -108,11 +228,12 @@ img {
   display: flex;
   flex-direction: column;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .project-card:hover {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14);
+  transform: translateY(-2px);
 }
 
 .project-image-wrapper {
@@ -184,6 +305,16 @@ details[open] summary::before {
   content: "▼  ";
 }
 
+.project-details summary:hover {
+  text-decoration: none;
+}
+
+.project-details summary:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
 .detail-block {
   margin-top: 0.75rem;
 }
@@ -200,7 +331,6 @@ details[open] summary::before {
 .project-links {
   display: flex;
   gap: 0.75rem;
-  margin-top: auto;
   padding-top: 0.5rem;
 }
 
@@ -210,12 +340,18 @@ details[open] summary::before {
   border-radius: 6px;
   font-size: 0.88rem;
   font-weight: 600;
-  transition: opacity 0.15s ease;
+  transition: opacity 0.15s ease, transform 0.15s ease;
 }
 
 .btn:hover {
   opacity: 0.85;
   text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.btn:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
 }
 
 /* ----- Contact section ----- */
@@ -241,6 +377,25 @@ details[open] summary::before {
 }
 
 /* ----- Responsive tweaks ----- */
+@media (max-width: 640px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .about-photo {
+    max-width: 300px;
+    margin: 0 auto 0.25rem;
+  }
+
+  .about-photo-image {
+    max-height: min(70vh, 480px);
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
 @media (max-width: 500px) {
   .project-grid {
     grid-template-columns: 1fr;

@@ -1,0 +1,33 @@
+# ============================================================
+# Recommender system project
+# Repo: movielens-recommender-system
+# ============================================================
+
+title: "MovieLens Recommender System"
+
+short_summary: >
+  Built a movie recommender using the MovieLens dataset, focusing on clean data preparation, baseline modeling, and
+  evaluation. The project is organized to show both the implementation and the reasoning behind model choices.
+
+tech_stack:
+  - Python
+  - pandas
+  - NumPy
+  - scikit-learn
+  - Jupyter Notebooks
+
+problem_statement: >
+  Given historical user ratings, how can we recommend movies a user is likely to enjoy? The goal was to implement a
+  recommender workflow that is easy to understand, evaluate, and iterate on.
+
+approach: >
+  Prepared MovieLens ratings data for modeling, implemented recommendation baselines, and evaluated performance with
+  appropriate metrics. Structured the code/notebooks so that data cleaning, modeling, and evaluation are clearly
+  separated and reproducible.
+
+results_impact: >
+  Delivered a working recommender pipeline that can generate user-level recommendations and provides a strong template
+  for comparing approaches (e.g., baseline vs. more advanced models) as the project evolves.
+
+repo_url: "https://github.com/afnan-rah/movielens-recommender-system"
+image_path: "img/movielens_recommender_ui_v2.png"

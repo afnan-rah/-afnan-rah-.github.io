@@ -5,8 +5,41 @@
 <!-- ===== About section ===== -->
 <section id="about" class="section about-section">
   <h2>About Me</h2>
-  <div class="about-text">{{ student.about | safe }}</div>
+  <div class="about-layout">
+    {% if student.photo_path %}
+    <div class="about-photo">
+      <img
+        class="about-photo-image"
+        src="{{ student.photo_path }}"
+        alt="Portrait of {{ student.name }}"
+        loading="lazy"
+      />
+    </div>
+    {% endif %}
+    <div class="about-text">{{ student.about | safe }}</div>
+  </div>
 </section>
+
+<!-- ===== Skills section ===== -->
+{% if student.skills %}
+<section id="skills" class="section skills-section">
+  <h2>Skills</h2>
+  <div class="skills-block" aria-label="Skills">
+    <div class="skills-groups">
+      {% for group in student.skills %}
+      <div class="skills-group">
+        <div class="skills-category">{{ group.category }}</div>
+        <div class="skills-chips">
+          {% for skill in group.skills %}
+          <span class="tech-badge skill-chip">{{ skill }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
 
 <!-- ===== Projects section ===== -->
 <section id="projects" class="section projects-section">

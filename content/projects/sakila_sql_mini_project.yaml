@@ -1,0 +1,31 @@
+# ============================================================
+# SQL mini-project (Sakila)
+# Repo: cmse492-hw02-rahman44
+# ============================================================
+
+title: "SQL Mini-Project: Sakila Database Analysis"
+
+short_summary: >
+  Worked with the Sakila sample database to answer business-style questions using SQL. This project highlights clear,
+  readable queries (joins, aggregation, subqueries) and an analysis mindset: translating a question into a query and
+  interpreting the result.
+
+tech_stack:
+  - SQL
+  - Relational databases
+  - Data analysis
+
+problem_statement: >
+  The Sakila database represents a simplified video-rental business. The goal was to use SQL to extract actionable
+  insights—such as customer behavior, inventory performance, and revenue patterns—from a relational schema.
+
+approach: >
+  Wrote and iterated on SQL queries to answer a set of structured questions, emphasizing correctness, readability, and
+  efficient use of joins and aggregation. Validated results with sanity checks and clear interpretation.
+
+results_impact: >
+  Produced a set of queries and outputs that demonstrate practical SQL fluency and the ability to communicate insights
+  from relational data—skills that transfer directly to analytics and data engineering workflows.
+
+repo_url: "https://github.com/afnan-rah/cmse492-hw02-rahman44"
+image_path: "img/sakila_schema_diagram.png"

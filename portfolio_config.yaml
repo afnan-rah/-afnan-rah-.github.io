@@ -14,14 +14,15 @@ student_file: content/Rahman_Profile.yaml
 # List the YAML files (inside content/projects/) you want shown.
 # Remove example projects and add your own once you're ready.
 projects:
-  - content/projects/example_project_1.yaml
-  - content/projects/example_project_2.yaml
+  - content/projects/aws_nyc311.yaml
+  - content/projects/movielens_recommender.yaml
+  - content/projects/sakila_sql_mini_project.yaml
 
 # --- Theme ---
 # Built-in options: "light", "dark", "msu-light", "msu-dark"
 # You can also add your own CSS file under static/css/themes/ and
 # use its name here (without the .css extension).
-theme: msu-dark
+theme: onyx-red
 
 # --- Site metadata ---
 # Used in the HTML <title> tag and browser tab.

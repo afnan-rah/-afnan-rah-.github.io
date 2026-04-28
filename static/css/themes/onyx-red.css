@@ -1,0 +1,117 @@
+/* ============================================================
+   themes/onyx-red.css  —  Sleek black + red modern theme.
+   Use by setting:  theme: onyx-red  in portfolio_config.yaml
+   ============================================================ */
+
+body {
+  background-color: #0b0b0c;
+  color: #f2f2f3;
+}
+
+a {
+  color: #ff3b3b;
+}
+
+a:hover {
+  color: #ff5c5c;
+  text-decoration: none;
+}
+
+/* Header */
+.site-header {
+  background-color: rgba(18, 18, 20, 0.9);
+  border-bottom: 1px solid #26262b;
+}
+
+.header-name {
+  color: #ffffff;
+}
+
+.header-tagline {
+  color: #b6b6bd;
+}
+
+.site-nav a {
+  color: #c6c6cc;
+}
+
+.site-nav a:hover {
+  color: #ffffff;
+}
+
+/* Section headings */
+.section h2 {
+  color: #ffffff;
+  border-color: #ff3b3b;
+}
+
+.about-photo {
+  background-color: #16161a;
+}
+
+.about-photo-image {
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
+}
+
+.skills-group {
+  background-color: #121214;
+  border-color: #26262b;
+}
+
+/* Project card */
+.project-card {
+  background-color: #121214;
+  border: 1px solid #26262b;
+}
+
+.project-title {
+  color: #ffffff;
+}
+
+.project-summary {
+  color: #c6c6cc;
+}
+
+/* Tech badges */
+.tech-badge {
+  background-color: rgba(255, 59, 59, 0.12);
+  color: #ff6a6a;
+  border: 1px solid rgba(255, 59, 59, 0.28);
+}
+
+/* Details */
+.project-details {
+  color: #c6c6cc;
+}
+
+.detail-block h4 {
+  color: #b6b6bd;
+}
+
+/* Buttons */
+.btn-repo {
+  background-color: #ff3b3b;
+  color: #0b0b0c;
+}
+
+.btn-notebook {
+  background-color: #16161a;
+  color: #f2f2f3;
+  border: 1px solid #2e2e35;
+}
+
+/* Contact */
+.contact-list a {
+  color: #ff3b3b;
+}
+
+/* Footer */
+.site-footer {
+  background-color: rgba(18, 18, 20, 0.9);
+  border-top: 1px solid #26262b;
+  color: #a8a8af;
+}
+
+.site-footer a {
+  color: #ff3b3b;
+}
